@@ -1,0 +1,240 @@
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20210419204337)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "password" varchar, "tokens" integer, "picture" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210419204337"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateUserHands (20210419204803)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "user_hands" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "bet" integer, "user_id" integer NOT NULL, "game_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_5889008a6b"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_1ad1a790a1"
+FOREIGN KEY ("game_id")
+  REFERENCES "games" ("id")
+)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE INDEX "index_user_hands_on_user_id" ON "user_hands" ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_user_hands_on_game_id" ON "user_hands" ("game_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210419204803"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateGames (20210419204923)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "games" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "min_bet" integer, "max_bet" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210419204923"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDealers (20210419204952)
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDealers (20210419204952)
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateDealers (20210419204952)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "dealers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "picture" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210419204952"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateDealerHands (20210419205205)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "dealer_hands" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "dealer_id" integer NOT NULL, "game_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_e8b91b9447"
+FOREIGN KEY ("dealer_id")
+  REFERENCES "dealers" ("id")
+, CONSTRAINT "fk_rails_09d1f8ede7"
+FOREIGN KEY ("game_id")
+  REFERENCES "games" ("id")
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_dealer_hands_on_dealer_id" ON "dealer_hands" ("dealer_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE INDEX "index_dealer_hands_on_game_id" ON "dealer_hands" ("game_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210419205205"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (5.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-04-19 20:55:48.462759"], ["updated_at", "2021-04-19 20:55:48.462759"]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGame Create (1.7ms)[0m  [1m[32mINSERT INTO "games" ("min_bet", "max_bet", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["min_bet", 1], ["max_bet", 10], ["created_at", "2021-04-19 21:04:41.611211"], ["updated_at", "2021-04-19 21:04:41.611211"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "tokens", "picture", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Hadi"], ["password", "123"], ["tokens", 1000000], ["picture", "https://www.history.com/.image/t_share/MTU3ODc4NjA0NTkxODY3NjE1/image-placeholder-title.jpg"], ["created_at", "2021-04-19 21:04:41.631189"], ["updated_at", "2021-04-19 21:04:41.631189"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDealer Create (1.2ms)[0m  [1m[32mINSERT INTO "dealers" ("name", "picture", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Andre"], ["picture", "https://i.pinimg.com/originals/78/d1/7e/78d17e8f4a5228e105ebf139f46753a3.jpg"], ["created_at", "2021-04-19 21:04:41.646677"], ["updated_at", "2021-04-19 21:04:41.646677"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUserHand Load (0.2ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands"[0m
+  [1m[36mDealerHand Load (0.2ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (1.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDealer Load (0.7ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDealer Destroy (1.2ms)[0m  [1m[31mDELETE FROM "dealers" WHERE "dealers"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGame Destroy (0.7ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGame Create (0.5ms)[0m  [1m[32mINSERT INTO "games" ("min_bet", "max_bet", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["min_bet", 1], ["max_bet", 10], ["created_at", "2021-04-19 21:22:27.880330"], ["updated_at", "2021-04-19 21:22:27.880330"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (3.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "tokens", "picture", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Hadi"], ["password", "123"], ["tokens", 1000000], ["picture", "https://www.history.com/.image/t_share/MTU3ODc4NjA0NTkxODY3NjE1/image-placeholder-title.jpg"], ["created_at", "2021-04-19 21:22:27.885990"], ["updated_at", "2021-04-19 21:22:27.885990"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDealer Create (0.4ms)[0m  [1m[32mINSERT INTO "dealers" ("name", "picture", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Andre"], ["picture", "https://i.pinimg.com/originals/78/d1/7e/78d17e8f4a5228e105ebf139f46753a3.jpg"], ["created_at", "2021-04-19 21:22:27.896833"], ["updated_at", "2021-04-19 21:22:27.896833"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUserHand Create (0.5ms)[0m  [1m[32mINSERT INTO "user_hands" ("bet", "user_id", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["bet", 10], ["user_id", 2], ["game_id", 2], ["created_at", "2021-04-19 21:22:27.958956"], ["updated_at", "2021-04-19 21:22:27.958956"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUserHand Create (0.5ms)[0m  [1m[32mINSERT INTO "user_hands" ("bet", "user_id", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["bet", 5], ["user_id", 2], ["game_id", 2], ["created_at", "2021-04-19 21:22:27.964012"], ["updated_at", "2021-04-19 21:22:27.964012"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUserHand Create (1.1ms)[0m  [1m[32mINSERT INTO "user_hands" ("bet", "user_id", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["bet", 1], ["user_id", 2], ["game_id", 2], ["created_at", "2021-04-19 21:22:27.968853"], ["updated_at", "2021-04-19 21:22:27.968853"]]
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDealerHand Create (2.3ms)[0m  [1m[32mINSERT INTO "dealer_hands" ("dealer_id", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["dealer_id", 2], ["game_id", 2], ["created_at", "2021-04-19 21:22:27.986136"], ["updated_at", "2021-04-19 21:22:27.986136"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDealerHand Create (0.5ms)[0m  [1m[32mINSERT INTO "dealer_hands" ("dealer_id", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["dealer_id", 2], ["game_id", 2], ["created_at", "2021-04-19 21:22:27.995428"], ["updated_at", "2021-04-19 21:22:27.995428"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDealerHand Create (0.6ms)[0m  [1m[32mINSERT INTO "dealer_hands" ("dealer_id", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["dealer_id", 2], ["game_id", 2], ["created_at", "2021-04-19 21:22:28.000861"], ["updated_at", "2021-04-19 21:22:28.000861"]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUserHand Load (0.8ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mDealerHand Load (0.5ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mDealer Load (0.3ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT "games".* FROM "games" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for ::1 at 2021-04-19 16:44:31 -0500
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/nestor/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/nestor/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 64.7ms | Allocations: 481)
+Completed 200 OK in 189ms (Views: 92.1ms | ActiveRecord: 0.0ms | Allocations: 4151)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-04-19 16:44:32 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/" for ::1 at 2021-04-19 16:45:03 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/nestor/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/nestor/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 16.0ms | Allocations: 192)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.0ms | Allocations: 862)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-04-19 16:45:05 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users" for ::1 at 2021-04-19 16:50:35 -0500
+Started GET "/games" for ::1 at 2021-04-19 16:50:35 -0500
+Processing by GamesController#index as */*
+Processing by UsersController#index as */*
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mGame Load (0.9ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.5ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.8ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mUserHand Load (0.5ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mDealer Load (1.7ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 711ms (Views: 655.3ms | ActiveRecord: 11.8ms | Allocations: 46512)
+
+
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 687ms (Views: 641.7ms | ActiveRecord: 18.7ms | Allocations: 43554)
+
+
+Started GET "/games" for ::1 at 2021-04-19 16:51:14 -0500
+Started GET "/users" for ::1 at 2021-04-19 16:51:14 -0500
+Processing by GamesController#index as */*
+Started GET "/dealers" for ::1 at 2021-04-19 16:51:14 -0500
+  [1m[36mGame Load (7.0ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Processing by UsersController#index as */*
+Processing by DealersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/dealers_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.4ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers"[0m
+  ↳ app/controllers/dealers_controller.rb:5:in `index'
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."dealer_id" = ?[0m  [["dealer_id", 2]]
+  ↳ app/controllers/dealers_controller.rb:5:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "dealer_hands" ON "games"."id" = "dealer_hands"."game_id" WHERE "dealer_hands"."dealer_id" = ?[0m  [["dealer_id", 2]]
+  ↳ app/controllers/dealers_controller.rb:5:in `index'
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.5ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 2]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.7ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 2]]
+  [1m[36mDealerHand Load (3.4ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."dealer_id" = ?[0m  [["dealer_id", 2]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.5ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mUserHand Load (0.5ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 143ms (Views: 140.9ms | ActiveRecord: 1.8ms | Allocations: 13770)
+
+
+  ↳ app/controllers/dealers_controller.rb:5:in `index'
+Completed 200 OK in 269ms (Views: 256.3ms | ActiveRecord: 12.4ms | Allocations: 19930)
+
+
+  [1m[36mGame Load (1.5ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "dealer_hands" ON "games"."id" = "dealer_hands"."game_id" WHERE "dealer_hands"."dealer_id" = ?[0m  [["dealer_id", 2]]
+  ↳ app/controllers/dealers_controller.rb:5:in `index'
+Completed 200 OK in 200ms (Views: 174.2ms | ActiveRecord: 7.1ms | Allocations: 16528)
+
+
