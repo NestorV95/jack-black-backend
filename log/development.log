@@ -1652,3 +1652,1718 @@ Processing by DealersController#index as */*
 Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 1.2ms | Allocations: 4512)
 
 
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUserHand Load (0.5ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUserHand Destroy (1.1ms)[0m  [1m[31mDELETE FROM "user_hands" WHERE "user_hands"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (14.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUserHand Destroy (0.3ms)[0m  [1m[31mDELETE FROM "user_hands" WHERE "user_hands"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUserHand Destroy (0.6ms)[0m  [1m[31mDELETE FROM "user_hands" WHERE "user_hands"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDealerHand Load (0.4ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDealerHand Destroy (0.8ms)[0m  [1m[31mDELETE FROM "dealer_hands" WHERE "dealer_hands"."id" = ?[0m  [["id", 1]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDealerHand Destroy (0.2ms)[0m  [1m[31mDELETE FROM "dealer_hands" WHERE "dealer_hands"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDealerHand Destroy (0.2ms)[0m  [1m[31mDELETE FROM "dealer_hands" WHERE "dealer_hands"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.2ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDealer Load (0.4ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDealer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "dealers" WHERE "dealers"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGame Destroy (0.2ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 2]]
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGame Create (0.9ms)[0m  [1m[32mINSERT INTO "games" ("min_bet", "max_bet", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["min_bet", 1], ["max_bet", 10], ["created_at", "2021-04-20 02:21:44.153605"], ["updated_at", "2021-04-20 02:21:44.153605"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "tokens", "picture", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Hadi"], ["password", "123"], ["tokens", 1000000], ["picture", "https://www.history.com/.image/t_share/MTU3ODc4NjA0NTkxODY3NjE1/image-placeholder-title.jpg"], ["created_at", "2021-04-20 02:21:44.163698"], ["updated_at", "2021-04-20 02:21:44.163698"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDealer Create (0.2ms)[0m  [1m[32mINSERT INTO "dealers" ("name", "picture", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Andre"], ["picture", "https://i.pinimg.com/originals/78/d1/7e/78d17e8f4a5228e105ebf139f46753a3.jpg"], ["created_at", "2021-04-20 02:21:44.173180"], ["updated_at", "2021-04-20 02:21:44.173180"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUserHand Create (0.3ms)[0m  [1m[32mINSERT INTO "user_hands" ("bet", "user_id", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["bet", 10], ["user_id", 3], ["game_id", 3], ["created_at", "2021-04-20 02:21:44.189841"], ["updated_at", "2021-04-20 02:21:44.189841"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUserHand Create (0.3ms)[0m  [1m[32mINSERT INTO "user_hands" ("bet", "user_id", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["bet", 5], ["user_id", 3], ["game_id", 3], ["created_at", "2021-04-20 02:21:44.199454"], ["updated_at", "2021-04-20 02:21:44.199454"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUserHand Create (0.2ms)[0m  [1m[32mINSERT INTO "user_hands" ("bet", "user_id", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["bet", 1], ["user_id", 3], ["game_id", 3], ["created_at", "2021-04-20 02:21:44.208028"], ["updated_at", "2021-04-20 02:21:44.208028"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDealerHand Create (0.2ms)[0m  [1m[32mINSERT INTO "dealer_hands" ("dealer_id", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["dealer_id", 3], ["game_id", 3], ["created_at", "2021-04-20 02:21:44.217481"], ["updated_at", "2021-04-20 02:21:44.217481"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDealerHand Create (0.2ms)[0m  [1m[32mINSERT INTO "dealer_hands" ("dealer_id", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["dealer_id", 3], ["game_id", 3], ["created_at", "2021-04-20 02:21:44.226115"], ["updated_at", "2021-04-20 02:21:44.226115"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDealerHand Create (0.2ms)[0m  [1m[32mINSERT INTO "dealer_hands" ("dealer_id", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["dealer_id", 3], ["game_id", 3], ["created_at", "2021-04-20 02:21:44.235127"], ["updated_at", "2021-04-20 02:21:44.235127"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2021-04-19 19:22:00 -0700
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/learn/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/learn/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 15.8ms | Allocations: 481)
+Completed 200 OK in 57ms (Views: 28.5ms | ActiveRecord: 0.0ms | Allocations: 4146)
+
+
+Started GET "/favicon.ico" for 127.0.0.1 at 2021-04-19 19:22:01 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/games" for 127.0.0.1 at 2021-04-19 19:22:05 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.2ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.2ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.3ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 161ms (Views: 142.1ms | ActiveRecord: 6.2ms | Allocations: 40308)
+
+
+Started GET "/index" for 127.0.0.1 at 2021-04-19 19:22:06 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/games" for 127.0.0.1 at 2021-04-19 19:23:47 -0700
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.2ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.2ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.2ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 268ms (Views: 225.5ms | ActiveRecord: 13.7ms | Allocations: 38679)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 19:38:14 -0700
+Processing by GamesController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.2ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.2ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.2ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 69ms (Views: 68.7ms | ActiveRecord: 3.0ms | Allocations: 9562)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 19:38:29 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.2ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 54ms (Views: 52.1ms | ActiveRecord: 1.2ms | Allocations: 8865)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 19:38:49 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 1.1ms | Allocations: 8865)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 19:39:26 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 1.0ms | Allocations: 8865)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 19:39:54 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.3ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 50ms (Views: 48.0ms | ActiveRecord: 1.3ms | Allocations: 8845)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 19:41:34 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 1.0ms | Allocations: 8845)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 19:42:00 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 54ms (Views: 52.0ms | ActiveRecord: 1.2ms | Allocations: 8845)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 19:46:07 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 1.1ms | Allocations: 8847)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 19:46:14 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 59ms (Views: 58.1ms | ActiveRecord: 1.1ms | Allocations: 8845)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 19:46:15 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 1.0ms | Allocations: 8845)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 19:46:15 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.2ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 1.0ms | Allocations: 8845)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 19:46:16 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 70ms (Views: 68.6ms | ActiveRecord: 1.0ms | Allocations: 8846)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 19:46:17 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 1.0ms | Allocations: 8845)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 19:47:02 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 1.0ms | Allocations: 8845)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 19:47:03 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 1.0ms | Allocations: 8847)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 19:47:04 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 1.0ms | Allocations: 8845)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 19:47:08 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 42ms (Views: 40.9ms | ActiveRecord: 1.0ms | Allocations: 8845)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 19:47:10 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 44ms (Views: 42.6ms | ActiveRecord: 1.0ms | Allocations: 8845)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 19:53:26 -0700
+Processing by GamesController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (3.0ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.2ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.2ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (2.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 69ms (Views: 68.4ms | ActiveRecord: 8.9ms | Allocations: 9541)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 19:53:30 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 48ms (Views: 46.1ms | ActiveRecord: 1.2ms | Allocations: 8845)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 19:53:32 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 3]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 1.2ms | Allocations: 8845)
+
+
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUserHand Load (0.2ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUserHand Destroy (2.8ms)[0m  [1m[31mDELETE FROM "user_hands" WHERE "user_hands"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUserHand Destroy (1.6ms)[0m  [1m[31mDELETE FROM "user_hands" WHERE "user_hands"."id" = ?[0m  [["id", 5]]
+  [1m[36mTRANSACTION (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUserHand Destroy (1.1ms)[0m  [1m[31mDELETE FROM "user_hands" WHERE "user_hands"."id" = ?[0m  [["id", 6]]
+  [1m[36mTRANSACTION (4.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDealerHand Load (0.2ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDealerHand Destroy (2.4ms)[0m  [1m[31mDELETE FROM "dealer_hands" WHERE "dealer_hands"."id" = ?[0m  [["id", 4]]
+  [1m[36mTRANSACTION (5.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDealerHand Destroy (5.4ms)[0m  [1m[31mDELETE FROM "dealer_hands" WHERE "dealer_hands"."id" = ?[0m  [["id", 5]]
+  [1m[36mTRANSACTION (5.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDealerHand Destroy (3.4ms)[0m  [1m[31mDELETE FROM "dealer_hands" WHERE "dealer_hands"."id" = ?[0m  [["id", 6]]
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Destroy (0.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mDealer Load (0.2ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDealer Destroy (0.2ms)[0m  [1m[31mDELETE FROM "dealers" WHERE "dealers"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGame Destroy (0.2ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = ?[0m  [["id", 3]]
+  [1m[36mTRANSACTION (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mGame Create (0.3ms)[0m  [1m[32mINSERT INTO "games" ("min_bet", "max_bet", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["min_bet", 1], ["max_bet", 10], ["created_at", "2021-04-20 03:11:37.059952"], ["updated_at", "2021-04-20 03:11:37.059952"]]
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Create (5.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "tokens", "picture", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Hadi"], ["password", "123"], ["tokens", 1000000], ["picture", "https://www.history.com/.image/t_share/MTU3ODc4NjA0NTkxODY3NjE1/image-placeholder-title.jpg"], ["created_at", "2021-04-20 03:11:37.071677"], ["updated_at", "2021-04-20 03:11:37.071677"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDealer Create (0.3ms)[0m  [1m[32mINSERT INTO "dealers" ("name", "picture", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Andre"], ["picture", "https://i.pinimg.com/originals/78/d1/7e/78d17e8f4a5228e105ebf139f46753a3.jpg"], ["created_at", "2021-04-20 03:11:37.090707"], ["updated_at", "2021-04-20 03:11:37.090707"]]
+  [1m[36mTRANSACTION (6.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUserHand Create (0.3ms)[0m  [1m[32mINSERT INTO "user_hands" ("bet", "user_id", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["bet", 10], ["user_id", 4], ["game_id", 4], ["created_at", "2021-04-20 03:11:37.110543"], ["updated_at", "2021-04-20 03:11:37.110543"]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mDealerHand Create (0.3ms)[0m  [1m[32mINSERT INTO "dealer_hands" ("dealer_id", "game_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["dealer_id", 4], ["game_id", 4], ["created_at", "2021-04-20 03:11:37.130983"], ["updated_at", "2021-04-20 03:11:37.130983"]]
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:13:14 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GamesController#index as */*
+  [1m[36mGame Load (1.3ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.2ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.3ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.2ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 166ms (Views: 129.5ms | ActiveRecord: 8.0ms | Allocations: 37268)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:13:15 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.2ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.2ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 45ms (Views: 44.1ms | ActiveRecord: 1.1ms | Allocations: 7451)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:13:16 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 44ms (Views: 42.5ms | ActiveRecord: 1.0ms | Allocations: 7451)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:14:19 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 48ms (Views: 45.5ms | ActiveRecord: 2.6ms | Allocations: 7451)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:14:33 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.2ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 44ms (Views: 43.1ms | ActiveRecord: 1.1ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:21:04 -0700
+Processing by GamesController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.2ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.2ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.2ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 167ms (Views: 157.2ms | ActiveRecord: 5.7ms | Allocations: 28731)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:25:51 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.2ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.2ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 165ms (Views: 126.4ms | ActiveRecord: 13.7ms | Allocations: 30186)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:39:46 -0700
+Processing by GamesController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.3ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.2ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.2ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 48ms (Views: 48.1ms | ActiveRecord: 5.1ms | Allocations: 8128)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:40:52 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 46ms (Views: 45.1ms | ActiveRecord: 1.0ms | Allocations: 7451)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:41:01 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 49ms (Views: 47.6ms | ActiveRecord: 1.2ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:43:13 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 50ms (Views: 46.0ms | ActiveRecord: 4.1ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:43:33 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.2ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 51ms (Views: 49.3ms | ActiveRecord: 1.3ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:48:27 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.2ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 46ms (Views: 44.3ms | ActiveRecord: 1.3ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:48:43 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.2ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 48ms (Views: 46.2ms | ActiveRecord: 1.2ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:50:08 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (9.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 68ms (Views: 57.8ms | ActiveRecord: 10.0ms | Allocations: 7432)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:50:50 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 45ms (Views: 43.2ms | ActiveRecord: 1.2ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:52:00 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.2ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 45ms (Views: 44.1ms | ActiveRecord: 1.2ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:58:36 -0700
+Processing by GamesController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.2ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.3ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.3ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 56ms (Views: 55.5ms | ActiveRecord: 2.6ms | Allocations: 8128)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:58:54 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (3.2ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 50ms (Views: 44.7ms | ActiveRecord: 5.4ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:58:56 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 60ms (Views: 58.5ms | ActiveRecord: 1.2ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:58:57 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 45ms (Views: 43.6ms | ActiveRecord: 1.1ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:58:58 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 40ms (Views: 38.3ms | ActiveRecord: 1.1ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:58:59 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 1.0ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:59:00 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.2ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 46ms (Views: 44.3ms | ActiveRecord: 1.2ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:59:01 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (1.8ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 45ms (Views: 42.5ms | ActiveRecord: 2.7ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:59:02 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 39ms (Views: 37.1ms | ActiveRecord: 1.0ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 20:59:03 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 1.0ms | Allocations: 7433)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 21:00:45 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (2.2ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 77ms (Views: 73.3ms | ActiveRecord: 3.2ms | Allocations: 7432)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 21:00:48 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 45ms (Views: 43.7ms | ActiveRecord: 1.2ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 21:03:06 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 1.0ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 21:13:23 -0700
+Processing by GamesController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.3ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.2ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.2ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 51ms (Views: 51.1ms | ActiveRecord: 2.3ms | Allocations: 8127)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 21:14:04 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 46ms (Views: 45.0ms | ActiveRecord: 1.1ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 21:15:00 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.2ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 48ms (Views: 46.5ms | ActiveRecord: 1.3ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 21:16:36 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (1.7ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 47ms (Views: 44.6ms | ActiveRecord: 2.7ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 21:17:18 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 48ms (Views: 44.6ms | ActiveRecord: 3.5ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 21:33:46 -0700
+Processing by GamesController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.6ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.2ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.2ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 51ms (Views: 50.5ms | ActiveRecord: 2.5ms | Allocations: 8127)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 21:36:26 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 46ms (Views: 44.7ms | ActiveRecord: 1.1ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 21:37:11 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.2ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 1.2ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 21:39:44 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 44ms (Views: 42.4ms | ActiveRecord: 1.1ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 21:40:26 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 73ms (Views: 71.7ms | ActiveRecord: 1.2ms | Allocations: 7432)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 21:40:38 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (1.6ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.2ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 46ms (Views: 41.9ms | ActiveRecord: 3.7ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 21:40:46 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 1.1ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 21:42:18 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.1ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.2ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 1.1ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 21:43:40 -0700
+Processing by GamesController#index as */*
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.2ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (1.1ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 45ms (Views: 42.9ms | ActiveRecord: 2.1ms | Allocations: 7431)
+
+
+Started GET "/games" for 127.0.0.1 at 2021-04-19 21:55:41 -0700
+Processing by GamesController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "users"."id" FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealer_hands"."id" FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "dealers"."id" FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUserHand Load (0.2ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "user_hands" ON "users"."id" = "user_hands"."user_id" WHERE "user_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealerHand Load (0.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+  [1m[36mDealer Load (0.2ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" INNER JOIN "dealer_hands" ON "dealers"."id" = "dealer_hands"."dealer_id" WHERE "dealer_hands"."game_id" = ?[0m  [["game_id", 4]]
+  ↳ app/controllers/games_controller.rb:5:in `index'
+Completed 200 OK in 47ms (Views: 46.5ms | ActiveRecord: 5.2ms | Allocations: 8127)
+
+

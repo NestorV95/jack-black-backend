@@ -17,8 +17,4 @@ hadi = User.create(name: "Hadi",password: "123",tokens: 1000000, picture:"https:
 andre = Dealer.create(name:"Andre", picture: "https://i.pinimg.com/originals/78/d1/7e/78d17e8f4a5228e105ebf139f46753a3.jpg")
 
 h_hand1 = UserHand.create(bet:10, user: hadi, game: game)
-h_hand2 = UserHand.create(bet:5, user: hadi, game: game)
-h_hand3 = UserHand.create(bet:1, user: hadi, game: game)
 a_hand1 = DealerHand.create(dealer: andre, game: game)
-a_hand2 = DealerHand.create(dealer: andre, game: game)
-a_hand3 = DealerHand.create(dealer: andre, game: game)
