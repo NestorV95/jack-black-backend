@@ -12,13 +12,13 @@ class UsersController < ApplicationController
     end 
 
     def create
-        user = User.create({picture:params[:picture],name:params[:name],password:params[:password],tokens:params[:tokens]})
+        user = User.create(user_params)
         render json: UserSerializer.new(user)
     end
 
     def update
         user = User.find_by(id: params[:id])
-        user.update({picture:params[:picture],name:params[:name],password:params[:password]}) 
+        user.update(user_params) 
         render json: UserSerializer.new(user)
     end
 
@@ -32,6 +32,10 @@ class UsersController < ApplicationController
 
     def find_user
         user = User.find_by(id: params[:id]) 
+    end
+
+    def user_params
+        {picture:params[:picture],name:params[:name],password:params[:password],tokens:params[:tokens]}
     end
 
 end

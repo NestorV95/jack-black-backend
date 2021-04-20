@@ -2081,3 +2081,167 @@ Processing by UsersController#update as JSON
 Completed 200 OK in 114ms (Views: 42.3ms | ActiveRecord: 5.9ms | Allocations: 16066)
 
 
+Started DELETE "/users/3" for ::1 at 2021-04-20 10:45:16 -0500
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#destroy as JSON
+  Parameters: {"id"=>"3", "user"=>{}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26:in `destroy'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:27:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:27:in `destroy'
+  [1m[36mUserHand Load (0.2ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:27:in `destroy'
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:27:in `destroy'
+  [1m[36mUser Destroy (3.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 3]]
+  ↳ app/controllers/users_controller.rb:28:in `destroy'
+Completed 200 OK in 73ms (Views: 41.8ms | ActiveRecord: 7.6ms | Allocations: 18820)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Started DELETE "/users/4" for ::1 at 2021-04-20 10:50:10 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#destroy as JSON
+  Parameters: {"id"=>"4", "user"=>{}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:26:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:27:in `destroy'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:27:in `destroy'
+  [1m[36mUserHand Load (0.3ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:27:in `destroy'
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:27:in `destroy'
+  [1m[36mUser Destroy (18.3ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/users_controller.rb:28:in `destroy'
+Completed 200 OK in 203ms (Views: 99.3ms | ActiveRecord: 31.3ms | Allocations: 18825)
+
+
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+Started GET "/dealer_hand" for ::1 at 2021-04-20 11:17:32 -0500
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/dealer_hand"):
+  
+Started GET "/" for ::1 at 2021-04-20 11:17:51 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/nestor/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/nestor/.rvm/gems/ruby-2.6.1/gems/railties-6.1.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 14.5ms | Allocations: 316)
+Completed 200 OK in 50ms (Views: 20.4ms | ActiveRecord: 0.0ms | Allocations: 2455)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-04-20 11:17:52 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/dogs" for ::1 at 2021-04-20 11:18:04 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/dogs"):
+  
+Started GET "/dealer_hands" for ::1 at 2021-04-20 11:18:07 -0500
+Processing by DealerHandsController#index as HTML
+  [1m[36mDealerHand Load (1.1ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands"[0m
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mDealer Load (1.0ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" WHERE "dealers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mCACHE Dealer Load (0.0ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" WHERE "dealers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mCACHE Dealer Load (0.0ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" WHERE "dealers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+Completed 200 OK in 92ms (Views: 75.7ms | ActiveRecord: 5.5ms | Allocations: 21944)
+
+
+Started GET "/dealer_hands" for ::1 at 2021-04-20 11:18:16 -0500
+Processing by DealerHandsController#index as HTML
+  [1m[36mDealerHand Load (0.4ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands"[0m
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mDealer Load (0.3ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" WHERE "dealers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mCACHE Dealer Load (0.0ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" WHERE "dealers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mCACHE Dealer Load (0.0ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" WHERE "dealers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.9ms | Allocations: 5756)
+
+
+Started GET "/dealer_hands" for ::1 at 2021-04-20 11:18:20 -0500
+Processing by DealerHandsController#index as */*
+  [1m[36mDealerHand Load (0.2ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands"[0m
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mDealer Load (0.3ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" WHERE "dealers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mCACHE Dealer Load (0.0ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" WHERE "dealers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mCACHE Dealer Load (0.0ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" WHERE "dealers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+Completed 200 OK in 25ms (Views: 24.0ms | ActiveRecord: 0.9ms | Allocations: 5754)
+
+
+Started GET "/dealer_hands" for ::1 at 2021-04-20 11:19:14 -0500
+Processing by DealerHandsController#index as */*
+  [1m[36mDealerHand Load (0.2ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands"[0m
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mDealer Load (0.2ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" WHERE "dealers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mCACHE Dealer Load (0.0ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" WHERE "dealers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mCACHE Dealer Load (0.0ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" WHERE "dealers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.6ms | Allocations: 5757)
+
+
+Started GET "/dealer_hands" for ::1 at 2021-04-20 11:27:09 -0500
+Processing by DealerHandsController#index as */*
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mDealerHand Load (0.2ms)[0m  [1m[34mSELECT "dealer_hands".* FROM "dealer_hands"[0m
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mDealer Load (0.2ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" WHERE "dealers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mCACHE Dealer Load (0.0ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" WHERE "dealers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mCACHE Dealer Load (0.0ms)[0m  [1m[34mSELECT "dealers".* FROM "dealers" WHERE "dealers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+  [1m[36mCACHE Game Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/dealer_hands_controller.rb:6:in `index'
+Completed 200 OK in 76ms (Views: 76.0ms | ActiveRecord: 2.7ms | Allocations: 6369)
+
+
