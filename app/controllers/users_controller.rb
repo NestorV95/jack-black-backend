@@ -11,22 +11,22 @@ class UsersController < ApplicationController
         render json: UserSerializer.new(user)
     end 
 
-    # def create
-    #     user = User.create(user_params)
-    #     render json: UserSerializer.new(user)
-    # end
+    def create
+        user = User.create({picture:params[:picture],name:params[:name],password:params[:password],tokens:params[:tokens]})
+        render json: UserSerializer.new(user)
+    end
 
-    # def update
-    #     user = User.find_by(id: params[:id]
-    #     render json: UserSerializer.new(user)
-    #     user.update(user_params) 
-    # end
+    def update
+        user = User.find_by(id: params[:id])
+        user.update({picture:params[:picture],name:params[:name],password:params[:password]}) 
+        render json: UserSerializer.new(user)
+    end
 
-    # def destroy
-    #     user = User.find_by(id: params[:id]) 
-    #     render json: UserSerializer.new(user)
-    #     user.delete
-    # end
+    def destroy
+        user = User.find_by(id: params[:id]) 
+        render json: UserSerializer.new(user)
+        user.delete
+    end
 
     private 
 
@@ -35,7 +35,7 @@ class UsersController < ApplicationController
     end
 
     def user_params
-        params.require(:user).permit(:username, :password, :password_confirmation, :tokens, :picture)
+        ({picture:params[:picture],name:params[:name],password:params[:password],tokens:params[:tokens]})
     end
     
 end

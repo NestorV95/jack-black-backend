@@ -1652,3 +1652,432 @@ Processing by DealersController#index as */*
 Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 1.2ms | Allocations: 4512)
 
 
+Started GET "/users" for ::1 at 2021-04-19 20:53:58 -0500
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mUserHand Load (1.0ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 262ms (Views: 195.2ms | ActiveRecord: 9.1ms | Allocations: 26576)
+
+
+Started GET "/users" for ::1 at 2021-04-19 20:54:36 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mUserHand Load (0.6ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 1.8ms | Allocations: 4573)
+
+
+Started GET "/users" for ::1 at 2021-04-19 20:54:54 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mUserHand Load (0.3ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 2.2ms | Allocations: 4573)
+
+
+Started GET "/users" for ::1 at 2021-04-19 21:01:02 -0500
+Processing by UsersController#index as */*
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mUserHand Load (4.3ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 37ms (Views: 36.3ms | ActiveRecord: 14.3ms | Allocations: 5214)
+
+
+Started GET "/users" for ::1 at 2021-04-19 21:01:22 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mUserHand Load (0.3ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 1.0ms | Allocations: 4573)
+
+
+Started GET "/users" for ::1 at 2021-04-19 22:01:00 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mUserHand Load (0.3ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 120ms (Views: 89.3ms | ActiveRecord: 7.4ms | Allocations: 26353)
+
+
+Started GET "/users" for ::1 at 2021-04-19 22:03:33 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mUserHand Load (0.6ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 1.4ms | Allocations: 4573)
+
+
+Started GET "/users" for ::1 at 2021-04-19 22:03:35 -0500
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mUserHand Load (0.2ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 120ms (Views: 117.0ms | ActiveRecord: 2.3ms | Allocations: 4573)
+
+
+Started GET "/users" for ::1 at 2021-04-19 22:05:26 -0500
+Processing by UsersController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mUserHand Load (0.4ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 156ms (Views: 137.9ms | ActiveRecord: 16.2ms | Allocations: 20064)
+
+
+Started GET "/users" for ::1 at 2021-04-19 22:13:04 -0500
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mUserHand Load (0.6ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 123ms (Views: 95.4ms | ActiveRecord: 5.5ms | Allocations: 26443)
+
+
+Started GET "/users" for ::1 at 2021-04-19 22:33:22 -0500
+  [1m[35m (6.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.0ms | Allocations: 9930)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+  
+NoMethodError (undefined method `serialzable_hash' for #<UserSerializer:0x00007f9b4997a680>
+Did you mean?  serializable_hash):
+  
+app/controllers/users_controller.rb:6:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for inspect */ LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/users" for ::1 at 2021-04-19 22:35:04 -0500
+Processing by UsersController#index as */*
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mUserHand Load (0.2ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:6:in `index'
+Completed 200 OK in 114ms (Views: 25.4ms | ActiveRecord: 7.8ms | Allocations: 23446)
+
+
+Started GET "/users" for ::1 at 2021-04-19 22:37:41 -0500
+  
+SyntaxError (/Users/nestor/Desktop/Jack-black/jack-black-backend/app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+...ser = User.create({user_params})
+...                              ^):
+  
+app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+Started GET "/users" for ::1 at 2021-04-19 22:38:53 -0500
+  
+SyntaxError (/Users/nestor/Desktop/Jack-black/jack-black-backend/app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+...ser = User.create({user_params})
+...                              ^):
+  
+app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+Started POST "/users" for ::1 at 2021-04-19 22:40:11 -0500
+  
+SyntaxError (/Users/nestor/Desktop/Jack-black/jack-black-backend/app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+...ser = User.create({user_params})
+...                              ^):
+  
+app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+Started POST "/users" for ::1 at 2021-04-19 22:41:16 -0500
+  
+SyntaxError (/Users/nestor/Desktop/Jack-black/jack-black-backend/app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+...ser = User.create({user_params})
+...                              ^):
+  
+app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+Started POST "/users" for ::1 at 2021-04-19 22:44:20 -0500
+  
+SyntaxError (/Users/nestor/Desktop/Jack-black/jack-black-backend/app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+...ser = User.create({user_params})
+...                              ^):
+  
+app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+Started POST "/users" for ::1 at 2021-04-19 22:45:48 -0500
+  
+SyntaxError (/Users/nestor/Desktop/Jack-black/jack-black-backend/app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+...ser = User.create({user_params})
+...                              ^):
+  
+app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+Started POST "/users" for ::1 at 2021-04-19 22:47:45 -0500
+  
+SyntaxError (/Users/nestor/Desktop/Jack-black/jack-black-backend/app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+...ser = User.create({user_params})
+...                              ^):
+  
+app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+Started POST "/users" for ::1 at 2021-04-19 22:48:53 -0500
+  
+SyntaxError (/Users/nestor/Desktop/Jack-black/jack-black-backend/app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+...ser = User.create({user_params})
+...                              ^):
+  
+app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+Started POST "/users" for ::1 at 2021-04-19 22:49:57 -0500
+  
+SyntaxError (/Users/nestor/Desktop/Jack-black/jack-black-backend/app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+...ser = User.create({user_params})
+...                              ^):
+  
+app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+Started POST "/users" for ::1 at 2021-04-19 22:54:56 -0500
+  
+SyntaxError (/Users/nestor/Desktop/Jack-black/jack-black-backend/app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+...ser = User.create({user_params})
+...                              ^):
+  
+app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+app/controllers/users_controller.rb:15: syntax error, unexpected '}', expecting =>
+Started POST "/users" for ::1 at 2021-04-19 22:55:24 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as JSON
+  Parameters: {"picture"=>"https://images.coplusk.net/project_images/208626/image/2019-11-27-210127-burger.jpg", "name"=>"Ness", "password"=>"[FILTERED]", "tokens"=>"[FILTERED]", "user"=>{"name"=>"Ness", "password"=>"[FILTERED]", "tokens"=>"[FILTERED]", "picture"=>"https://images.coplusk.net/project_images/208626/image/2019-11-27-210127-burger.jpg"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Create (5.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "tokens", "picture", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Ness"], ["password", "oof"], ["tokens", 500], ["picture", "https://images.coplusk.net/project_images/208626/image/2019-11-27-210127-burger.jpg"], ["created_at", "2021-04-20 03:55:24.570084"], ["updated_at", "2021-04-20 03:55:24.570084"]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUserHand Load (0.2ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 200 OK in 101ms (Views: 56.1ms | ActiveRecord: 12.4ms | Allocations: 13149)
+
+
+Started POST "/users" for ::1 at 2021-04-19 23:12:25 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#create as JSON
+  Parameters: {"picture"=>"https://images.coplusk.net/project_images/208626/image/2019-11-27-210127-burger.jpg", "name"=>"oof", "password"=>"[FILTERED]", "tokens"=>"[FILTERED]", "user"=>{"name"=>"oof", "password"=>"[FILTERED]", "tokens"=>"[FILTERED]", "picture"=>"https://images.coplusk.net/project_images/208626/image/2019-11-27-210127-burger.jpg"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "tokens", "picture", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "oof"], ["password", "oof"], ["tokens", 500], ["picture", "https://images.coplusk.net/project_images/208626/image/2019-11-27-210127-burger.jpg"], ["created_at", "2021-04-20 04:12:25.221838"], ["updated_at", "2021-04-20 04:12:25.221838"]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUserHand Load (0.5ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 200 OK in 68ms (Views: 36.7ms | ActiveRecord: 5.9ms | Allocations: 12096)
+
+
+Started POST "/users" for ::1 at 2021-04-19 23:13:05 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"picture"=>"https://images.coplusk.net/project_images/208626/image/2019-11-27-210127-burger.jpg", "name"=>"oof", "password"=>"[FILTERED]", "tokens"=>"[FILTERED]", "user"=>{"name"=>"oof", "password"=>"[FILTERED]", "tokens"=>"[FILTERED]", "picture"=>"https://images.coplusk.net/project_images/208626/image/2019-11-27-210127-burger.jpg"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "tokens", "picture", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "oof"], ["password", "oof"], ["tokens", 500], ["picture", "https://images.coplusk.net/project_images/208626/image/2019-11-27-210127-burger.jpg"], ["created_at", "2021-04-20 04:13:05.566421"], ["updated_at", "2021-04-20 04:13:05.566421"]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUserHand Load (0.3ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mGame Load (37.5ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 200 OK in 68ms (Views: 19.1ms | ActiveRecord: 41.3ms | Allocations: 4758)
+
+
+Started POST "/users" for ::1 at 2021-04-19 23:13:59 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"picture"=>"https://images.coplusk.net/project_images/208626/image/2019-11-27-210127-burger.jpg", "name"=>"oof", "password"=>"[FILTERED]", "tokens"=>"[FILTERED]", "user"=>{"name"=>"oof", "password"=>"[FILTERED]", "tokens"=>"[FILTERED]", "picture"=>"https://images.coplusk.net/project_images/208626/image/2019-11-27-210127-burger.jpg"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "tokens", "picture", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "oof"], ["password", "oof"], ["tokens", 500], ["picture", "https://images.coplusk.net/project_images/208626/image/2019-11-27-210127-burger.jpg"], ["created_at", "2021-04-20 04:13:59.320102"], ["updated_at", "2021-04-20 04:13:59.320102"]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUserHand Load (3.0ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 200 OK in 29ms (Views: 12.4ms | ActiveRecord: 10.3ms | Allocations: 4740)
+
+
+Started POST "/users" for ::1 at 2021-04-19 23:15:18 -0500
+Processing by UsersController#create as JSON
+  Parameters: {"picture"=>"https://images.coplusk.net/project_images/208626/image/2019-11-27-210127-burger.jpg", "name"=>"big", "password"=>"[FILTERED]", "tokens"=>"[FILTERED]", "user"=>{"name"=>"big", "password"=>"[FILTERED]", "tokens"=>"[FILTERED]", "picture"=>"https://images.coplusk.net/project_images/208626/image/2019-11-27-210127-burger.jpg"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mUser Create (4.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "password", "tokens", "picture", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "big"], ["password", "oof"], ["tokens", 500], ["picture", "https://images.coplusk.net/project_images/208626/image/2019-11-27-210127-burger.jpg"], ["created_at", "2021-04-20 04:15:18.444390"], ["updated_at", "2021-04-20 04:15:18.444390"]]
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:15:in `create'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mUserHand Load (0.2ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/users_controller.rb:16:in `create'
+Completed 200 OK in 49ms (Views: 36.0ms | ActiveRecord: 6.6ms | Allocations: 4740)
+
+
+Started POST "/users" for ::1 at 2021-04-19 23:32:25 -0500
+  
+SyntaxError (/Users/nestor/Desktop/Jack-black/jack-black-backend/app/controllers/users_controller.rb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+        user.update(user_params) 
+        ^~~~):
+  
+app/controllers/users_controller.rb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/users_controller.rb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started PATCH "/users/3" for ::1 at 2021-04-19 23:33:40 -0500
+  
+SyntaxError (/Users/nestor/Desktop/Jack-black/jack-black-backend/app/controllers/users_controller.rb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+        user.update(user_params) 
+        ^~~~):
+  
+app/controllers/users_controller.rb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/users_controller.rb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started PATCH "/users/3" for ::1 at 2021-04-19 23:35:14 -0500
+  
+SyntaxError (/Users/nestor/Desktop/Jack-black/jack-black-backend/app/controllers/users_controller.rb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+        user.update({picture:params[:pict...
+        ^~~~):
+  
+app/controllers/users_controller.rb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/users_controller.rb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started PATCH "/users/3" for ::1 at 2021-04-19 23:35:59 -0500
+  
+SyntaxError (/Users/nestor/Desktop/Jack-black/jack-black-backend/app/controllers/users_controller.rb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+        user.update({picture:params[:pict...
+        ^~~~):
+  
+app/controllers/users_controller.rb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+app/controllers/users_controller.rb:21: syntax error, unexpected tIDENTIFIER, expecting ')'
+Started PATCH "/users/3" for ::1 at 2021-04-19 23:36:19 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by UsersController#update as JSON
+  Parameters: {"picture"=>"https://images.coplusk.net/project_images/208626/image/2019-11-27-210127-burger.jpg", "name"=>"oof", "password"=>"[FILTERED]", "id"=>"3", "user"=>{"name"=>"oof", "password"=>"[FILTERED]", "picture"=>"https://images.coplusk.net/project_images/208626/image/2019-11-27-210127-burger.jpg"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  [1m[36mUser Update (2.2ms)[0m  [1m[33mUPDATE "users" SET "name" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["name", "oof"], ["updated_at", "2021-04-20 04:36:20.074938"], ["id", 3]]
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:21:in `update'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "user_hands"."id" FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "games"."id" FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mUserHand Load (0.2ms)[0m  [1m[34mSELECT "user_hands".* FROM "user_hands" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT "games".* FROM "games" INNER JOIN "user_hands" ON "games"."id" = "user_hands"."game_id" WHERE "user_hands"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:22:in `update'
+Completed 200 OK in 114ms (Views: 42.3ms | ActiveRecord: 5.9ms | Allocations: 16066)
+
+
