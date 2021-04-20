@@ -12,30 +12,28 @@ class UserHandsController < ApplicationController
     end
 
     def create
-        user_hand = UserHand.create(user_hand_params)
+        user_hand = UserHand.create({bet: params[:bet],user_id: params[:user_id],game_id: params[:game_id]})
         render json: UserHandSerializer.new(user_hand)
     end
 
     def update
         user_hand = UserHand.find_by(id: params[:id])
-        UserHand.update(user_hand_params)
+        UserHand.update({bet: params[:bet]})
         render json: UserHandSerializer.new(user_hand)
     end
 
     def destroy
         user_hand = UserHand.find_by(id: params[:id]) 
-        UserHand.delete
         render json: UserHandSerializer.new(user_hand)
+        user_hand.delete
     end
+
+    
 
     private 
 
     def find_user_hand
         user_hand = UserHand.find_by(id: params[:id]) 
-    end
-
-    def user_hand_params
-        params.require(:userhand).permit(:bet, :user_id, :game_id)
     end
 
 end

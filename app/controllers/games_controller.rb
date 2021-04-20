@@ -13,7 +13,7 @@ class GamesController < ApplicationController
     private
 
     def game_params
-        params.require(:game).permit(:min_bet, :max_bet)
+        ({min_bet: params[:min_bet], max_bet: params[:max_bet]})
     end
 
 end

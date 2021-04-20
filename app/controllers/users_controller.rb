@@ -34,8 +34,4 @@ class UsersController < ApplicationController
         user = User.find_by(id: params[:id]) 
     end
 
-    def user_params
-        ({picture:params[:picture],name:params[:name],password:params[:password],tokens:params[:tokens]})
-    end
-    
 end

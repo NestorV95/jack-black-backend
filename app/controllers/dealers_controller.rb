@@ -13,7 +13,7 @@ class DealersController < ApplicationController
     private
 
     def dealer_params
-        params.require(:dealer).permit(:name, :picture)
+        ({name: params[:name], picture: params[:picture]})
     end
     
 end
