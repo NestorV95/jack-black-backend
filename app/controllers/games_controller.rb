@@ -10,4 +10,10 @@ class GamesController < ApplicationController
         render json: GameSerializer.new(game)
     end 
 
+    private
+
+    def game_params
+        params.require(:game).permit(:min_bet, :max_bet)
+    end
+
 end
