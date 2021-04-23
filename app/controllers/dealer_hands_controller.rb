@@ -12,7 +12,7 @@ class DealerHandsController < ApplicationController
     end 
 
     def create 
-        dealer_hand = DealerHand.create({user_id: params[:user_id],game_id: params[:game_id]})
+        dealer_hand = DealerHand.create({dealer_id: params[:dealer_id],game_id: params[:game_id]})
         render json: DealerHandSerializer.new(dealer_hand)
     end
 

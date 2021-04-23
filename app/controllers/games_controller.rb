@@ -10,6 +10,11 @@ class GamesController < ApplicationController
         render json: GameSerializer.new(game)
     end 
 
+    def create
+        game = Game.create({min_bet: params[:min_bet], max_bet: params[:max_bet]})
+        render json: GameSerializer.new(game)
+    end
+
     private
 
     def game_params
