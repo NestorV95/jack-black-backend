@@ -1,24 +1,7 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Jack Black's Blackjack Backend
+  programmed by Andre Hochi & Nestor Venegas
+  Frontend Repo: https://github.com/NestorV95/jack-black-frontend  
+  Demo: https://studio.youtube.com/video/oC1BzbDucbE/edit
+  
+  ## Description
+  Rails API utilized in our Jack Black's Blackjack application.
